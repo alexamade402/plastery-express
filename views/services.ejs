@@ -1,0 +1,19 @@
+<%- include("partials/head") %>
+<%- include("partials/navbar") %>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-title text-center mx-auto mb-5" style="max-width: 500px;">
+            <p class="text-primary text-uppercase mb-2">Services Page</p>
+            <h1 class="display-6 mb-4">All Our Services</h1>
+        </div>
+
+        <div class="row g-4">
+            <% services.forEach(service => { %>
+                <%- include("partials/service-card", { service: service }) %>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
